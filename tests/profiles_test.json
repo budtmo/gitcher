@@ -1,0 +1,10 @@
+{
+  "ghe": {
+    "name": "test",
+    "email": "test@example.com"
+  },
+  "github": {
+    "name": "test2",
+    "email": "test2@example.com"
+  }
+}
