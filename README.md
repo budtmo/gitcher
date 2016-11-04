@@ -2,10 +2,16 @@ GitCher
 =======
 GitCher is able to save different git config profiles (user.name and user.email) and switch it from one to another.
 
-Quick Start
------------
+```bash
+pip install -e git+git@github.com:butomo1989/gitcher.git#egg=gitcher
+```
 
-//TODO
+Usage
+-----
+
+```bash
+gitcher -h
+```
 
 Unit tests
 ----------
