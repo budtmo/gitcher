@@ -1,10 +1,10 @@
 from unittest import TestCase
 
-from click.testing import CliRunner
 import mock
+from click.testing import CliRunner
 
+from gitcher import cli
 from . import CURRENT_PATH
-import cli
 
 
 class TestGetProfiles(TestCase):
@@ -16,7 +16,7 @@ class TestGetProfiles(TestCase):
         self.assertEqual(len(profiles), 2)
         self.assertIs(type(profiles), dict)
 
-    @mock.patch('cli.get_all_profiles')
+    @mock.patch('gitcher.cli.get_all_profiles')
     def test_display_profiles(self, mock_profiles):
         mock_profiles.return_value = {"ghe": {"name": "test", "email": "test@example.com"}}
         runner = CliRunner()
@@ -24,7 +24,7 @@ class TestGetProfiles(TestCase):
         self.assertIs(result.exit_code, 0)
         self.assertTrue('ghe' in result.output)
 
-    @mock.patch('cli.get_all_profiles')
+    @mock.patch('gitcher.cli.get_all_profiles')
     def test_display_empty_profiles(self, mock_profiles):
         mock_profiles.return_value = None
         runner = CliRunner()
