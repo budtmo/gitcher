@@ -18,5 +18,5 @@ setup(
     keywords='git config manager',
     install_requires=reqs,
     py_modules=['cli', 'utils'],
-    entry_points={'console_scripts': 'gitcher=gitcher.cli:main'}
+    entry_points={'console_scripts': 'gitcher=gitcher.cli:cli'}
 )
